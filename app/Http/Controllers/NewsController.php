@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NewsModel;
+use App\Models\News;
+use App\Models\Post;
+use App\Models\Visitor;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 /**
 * Untuk mengakses folder lokal(public/News_Images)
 * agar dapat menyimpan, edit, dan hapus gambar.
 */
+
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Redirect;
 
 class NewsController extends Controller
 {
@@ -25,31 +28,46 @@ class NewsController extends Controller
                 ->orderByRaw('id DESC')
                 ->paginate(8);
 
-        return view('news.index',['data' => $data]);
+        $heading = DB::table('news')->where('heading','>','0')
+                                    ->get(['id','title','content','image'])
+                                    ->last();
+
+        
+
+        return view('news.index',compact('data','heading'));
     }
 
     /*
     |--------------------------------------------------------------------------
-    | Halaman Dashboard
+    | Halaman Detail
     |--------------------------------------------------------------------------
     */
-    public function detail($id){
-        $data = NewsModel::find($id);
+    public function detail(Request $request, $id)
+    {
+        $ip = hash('sha512',$request->ip());
 
-        return view('news.detail',['data' => $data]);
+        Visitor::create([
+            'ip'   => $ip,
+            'date' => today(),
+            'news_id' => $request -> id
+         ]);
+
+        $data     = News::find($id);
+
+        $all_data = News::all();
+
+        $visitor  = Visitor::where('news_id', $id)->get();
+
+
+        $no = 1;
+
+        return view('news.detail', compact('data','visitor','all_data', 'no'));
     }
-
 
     /*
     |--------------------------------------------------------------------------
     | Tambah Berita
     |--------------------------------------------------------------------------
-    | Method yang dipakai untuk memasukan/membuat data ke Database dan Lokal.
-    | Ada dua method yaitu method add() dan method store().
-    | Method add() dipakai untuk menampilkan halaman untuk menambahkan berita.
-    | Method store() dipakai untuk memasukan/membuat data dan disimpan di
-    | Database dan Lokal(untuk gambar disimpan di folder public/News_Images).
-    |
     */
     public function add(){
         return view('admin.add');
@@ -74,36 +92,41 @@ class NewsController extends Controller
         $image          = $request->file('image');
         $image_name     = time().'-'.$image->getClientOriginalName();
         $destination    = 'News_Images';
-        $image -> move($destination, $image_name);
+        $image          -> move($destination, $image_name);
 
         /**
         * Insert ke Database.
         *
         */
-        NewsModel::create([
-            'title'     => $request -> title,
-            'image'     => $image_name,
-            'content'   => $request -> content,
-            'visitors'  => '0',
-        ]);
+        if ($request->heading == 0) {
+            News::create([
+                'title'     => $request -> title,
+                'image'     => $image_name,
+                'content'   => $request -> content,
+                'heading'   => 0
+            ]);
+        }
+        else {
+            News::create([
+                'title'     => $request -> title,
+                'image'     => $image_name,
+                'content'   => $request -> content,
+                'heading'   => 1
+            ]);
+        }
 
         return redirect('/dashboard/');
+
     }
 
     /*
     |--------------------------------------------------------------------------
     | Edit Gambar
     |--------------------------------------------------------------------------
-    | Method yang dipakai untuk mengedit & update data dari Database dan Lokal.
-    | Ada dua method yaitu method edit() dan method update().
-    | Method edit() dipakai untuk menampilkan halaman untuk edit berita.
-    | Method update() dipakai untuk mengupdate data yang dipilih dan disimpan
-    | di Database dan Lokal(untuk gambar disimpan di folder public/News_Images).
-    |
     */
     public function edit($id)
     {
-        $data = NewsModel::find($id);
+        $data = News::find($id);
         return view('admin.edit', ['data' => $data]);
     }
 
@@ -123,18 +146,12 @@ class NewsController extends Controller
         |--------------------------------------------------------------------------
         | Update Gambar
         |--------------------------------------------------------------------------
-        | Dalam menghapus gambar ada dua langkah yaitu:
-        | 1. Ambil data dari terlebih dahulu dari database lalu cocokan dengan
-        | yang ada di lokal, Setelah dicocokan maka gambar dihapus.
-        | 2. Setelah gambar terhapus lalu tambahkan gambar yang telah diinputkan oleh
-        | admin dan disimpan di lokal.
-        |
         */
             /**
             * Ambil gambar dan hapus.
             *
             */
-            $image          = NewsModel::where('id',$id) -> first();
+            $image          = News::where('id',$id) -> first();
             File::delete('News_Images/'.$image->image);
 
             /**
@@ -150,7 +167,7 @@ class NewsController extends Controller
         * Update ke Database.
         *
         */
-        $data = NewsModel::find($id);
+        $data = News::find($id);
         $data -> title   = $request -> title;
         $data -> content = $request -> content;
         $data -> image   = $image_name;
@@ -162,11 +179,6 @@ class NewsController extends Controller
     |--------------------------------------------------------------------------
     | Hapus Berita
     |--------------------------------------------------------------------------
-    | Method yang dipakai untuk menghapus data dari Database dan Lokal.
-    | Ada dua objek yang akan dihapus:
-    | 1. Menghapus gambar di lokal.
-    | 2. Menghapus record di Database.
-    |
     */
     public function delete($id)
     {
@@ -174,14 +186,14 @@ class NewsController extends Controller
         * Menghapus gambar di public/News_Images/.
         *
         */
-        $image          = NewsModel::where('id',$id) -> first();
+        $image          = News::where('id',$id) -> first();
         File::delete('News_Images/'.$image -> image);
 
         /**
         * Menghapus record di Database.
         *
         */
-        NewsModel::find($id)->delete();
+        News::find($id)->delete();
 
         return redirect('/dashboard');
     }

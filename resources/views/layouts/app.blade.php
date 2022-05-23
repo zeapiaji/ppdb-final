@@ -59,8 +59,8 @@
                         <li><a href="#guru">Manajemen</a></li>
                         </ul>
                     <li><a class="nav-link scrollto" href="#services">Ekstrakurikuler</a></li>
-                    <li><a class="nav-link scrollto" href="#galeri">Galeri</a></li>
-                    <li><a class="nav-link scrollto" href="/news/">Berita</a></li>
+                    {{-- <li><a class="nav-link scrollto" href="#galeri">Galeri</a></li> --}}
+                    {{-- <li><a class="nav-link scrollto" href="/news/">Berita</a></li> --}}
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li><a class="getstarted scrollto" href="#pricing">PPDB</a></li>
                     </ul>
@@ -69,7 +69,7 @@
             </div>
         </header>
 
-        <main class="py-5">
+        <main class="py-4">
             @yield('content')
         </main>
     </div>

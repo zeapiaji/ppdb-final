@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NewsModel;
-use Illuminate\Http\Request;
+use App\Models\News;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -25,10 +24,13 @@ class HomeController extends Controller
      */
     public function dashboard()
     {
-        $data = DB::table('news')
-                ->orderByRaw('id DESC')
-                ->paginate(20);
 
-        return view('admin.dashboard',['data' => $data]);
+        $total_news = News::select('*')->count();
+
+        $all_data = News::select('*')
+                    -> orderBy('id', 'desc')
+                    -> get();
+
+        return view('admin.dashboard', compact('all_data', 'total_news'));
     }
 }

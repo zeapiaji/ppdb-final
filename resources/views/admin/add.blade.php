@@ -29,12 +29,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Thumbnail & Gambar</label>
-                        <input type="file" name="image" id="formFile" class="form-control" required\>
+                        <input type="file" name="image" id="formFile" class="form-control" accept="image/*" required\>
                         @if($errors->has('image'))
                         <div class="text-danger">
                             {{ $errors->first('image')}}
                         </div>
                     @endif
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="heading" value="1" role="switch" id="flexSwitchCheckChecked">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Jadikan Heading?</label>
                     </div>
                 <button type="submit" class="btn btn-large btn-success">Tambahkan Berita</button>
                 </form>

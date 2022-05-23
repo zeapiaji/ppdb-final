@@ -8,7 +8,7 @@
             <div class="card-header">Dashboard</div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-6">Jumlah Berita : </div>
+                    <div class="col-6">Jumlah Berita : {{$total_news}}</div>
                     <div class="col-6">
                         <a href="/dashboard/add" class="btn btn-large btn-success">Tambah Berita</a>
                     </div>
@@ -23,13 +23,13 @@
                         <th>Tanggal Diupload</th>
                         <th>Opsi</th>
                     </tr>
-                    @foreach ($data as $item)
+                    @foreach ($all_data as $item)
                     <tr>
                         <td>{{$item -> id}}</td>
                         <td><img src="{{asset('News_Images/'.$item->image)}}" style="width: 200px;" alt=""></td>
                         <td>{{$item -> title}}</td>
                         <td>{{$item -> content}}</td>
-                        <td>{{$item -> visitors}}</td>
+                        <td>{{$item -> visitor -> count()}}</td>
                         <td>{{$item -> created_at}}</td>
                         <td>
                         <a href="/dashboard/edit/{{$item->id}}" class="btn btn-info">Edit</a>

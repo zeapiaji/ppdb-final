@@ -22,7 +22,11 @@ Route::get('/news/', 'NewsController@index');
 | Detail Berita
 |--------------------------------------------------------------------------
 */
-Route::get('/news/detail/{id}', 'NewsController@detail');
+// Route::name('front')->middleware('visitor:id')->group(function($id){
+//     Route::get('/news/detail/{id}', 'NewsController@detail')->name('news-detail');
+// });
+Route::get('/news/detail/{id}')->middleware('visitor:');
+Route::get('/news/detail/{id}', 'NewsController@detail')->name('detail');
 
 /*
 |--------------------------------------------------------------------------

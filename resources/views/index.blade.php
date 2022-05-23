@@ -4,7 +4,7 @@
 <section id="hero" class="d-flex">
     <div class="container-fluid position-relative" data-aos="fade-up" data-aos-delay="100" style="padding-right: 0px; padding-left: 0px;">
       <div data-aos="fade-up" data-aos-delay="100">
-        <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -12,13 +12,13 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="mahput.jpg" class="d-block w-100" alt="..." >
+              <img src="{{ asset('template-assets/img/carousel/mahaputra.jpg')}}" class="d-block w-100" alt="..." >
             </div>
             <div class="carousel-item">
-              <img src="mm.jpg" class="d-block w-100" alt="...">
+              <img src="{{ asset('template-assets/img/carousel/mm.jpg' )}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="rpl.jpg" class="d-block w-100" alt="...">
+              <img src="{{ asset('template-assets/img/carousel/rpl.jpg' )}}" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -42,20 +42,25 @@
 
           <div class="row">
 
+            <div class="section-title">
+                <h2>Jurusan</h2>
+                <p>Jurusan yang ada di SMKS MAHAPUTRA CERDAS UTAMA</p>
+            </div>
+
             <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/about-video.jpg" class="img-fluid" alt="">
+              <img src="template-assets/img/carousel/mulmedd.jpg" class="img-fluid" alt="">
             </div>
 
             <div id="multimedia" class="col-lg-6 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-              <h3>Jurusan Multimedia</h3>
+              <h3>Multimedia</h3>
               <p>
-                Jurusan Multimedia merupakan salah satu kompetensi keahlian di SMK yang termasuk dalam rumpun bidang keahlian Teknik Komputer dan Informatika. Jurusan ini ditempuh dalam 3 tahun masa belajar. Multimedia juga memberikan peluang bagi lulusannya untuk membuka usaha atau berwirausaha sendiri dalam bidang multimedia.
+                Jurusan Multimedia merupakan salah satu kompetensi keahlian di SMK yang termasuk dalam rumpun bidang keahlian Teknik Komputer dan Informatika. Jurusan ini ditempuh dalam 3 tahun masa belajar. Multimedia juga memberikan peluang bagi lulusannya untuk membuka usaha atau berwirausaha sendiri dalam bidang multimedia. Ada beberapa hal yang akan dipelajari di jurusan mutimedia yaitu :
               </p>
               <ul>
-                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bx bx-check-double"></i> Voluptate repellendus pariatur reprehenderit corporis sint.</li>
-                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i class="bx bx-check-double"></i> Dasar Desain Grafis.</li>
+                <li><i class="bx bx-check-double"></i> Desain Grafis Percetakan.</li>
+                <li><i class="bx bx-check-double"></i> Teknik animasi 2D dan 3D.</li>
+                <li><i class="bx bx-check-double"></i> Teknik Pengolahan Audio Video.</li>
               </ul>
             </div>
 
@@ -70,21 +75,21 @@
           <div class="row">
 
             <div id="rpl" class="col-lg-6 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-              <h3>Jurusan Rekayasa Perangkat Lunak</h3>
+              <h3>Rekayasa Perangkat Lunak</h3>
               <p>
-                Jurusan Multimedia merupakan salah satu kompetensi keahlian di SMK yang termasuk dalam rumpun bidang keahlian Teknik Komputer dan Informatika. Jurusan ini ditempuh dalam 3 tahun masa belajar. Multimedia juga memberikan peluang bagi lulusannya untuk membuka usaha atau berwirausaha sendiri dalam bidang multimedia.
+                Jurusan Rekayasa Perangkat Lunak merupakan salah satu kompetensi keahlian di SMK yang termasuk dalam rumpun bidang keahlian Teknik Komputer dan Informatika. Jurusan ini ditempuh dalam 3 tahun masa belajar. RPL adalah sebuah jurusan yang mempelajari dan mendalami semua cara-cara pengembangan perangkat lunak termasuk pembuatan, pemeliharaan, manajemen organisasi pengembangan perangkat lunak dan manajemen kualitas. Ada beberapa hal yang dipelajari di jurusan ini yaitu :
               </p>
               <ul>
-                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bx bx-check-double"></i> Voluptate repellendus pariatur reprehenderit corporis sint.</li>
-                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i class="bx bx-check-double"></i> Sistem Komputer.</li>
+                <li><i class="bx bx-check-double"></i> Algoritma dan Pemograman.</li>
+                <li><i class="bx bx-check-double"></i> Basis Data.</li>
+                <li><i class="bx bx-check-double"></i> Membuat Aplikasi Mobile dan Website.</li>
               </ul>
             </div>
 
 
             <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/about-video.jpg" class="img-fluid" alt="">
+              <img src="template-assets/img/carousel/rpl2.jpg" class="img-fluid" alt="">
             </div>
 
           </div>
@@ -104,10 +109,8 @@
           </div>
 
           <div class="row content about-video">
-            <div class="col-lg-6 pt-4 pt-lg-0">
-              <p class="fs-4">
-              SMKS Mahaputra Cerdas Utama didirikan pada 22 Agustus tahun 2016, adalah salah satu SMK swasta yang ada di Kabupaten Bandung yang memiliki program studi Multimedia (MM) dan Rekyasa Perangkat Lunak (RPL), menjadi sekolah pertama di Kabupaten Bandung dengan Konsep Green School atau Sekolah Hijau yang ramah lingkungan SMKS Mahaputra Cerdas Utama berkomitmen untuk mencetak Sumber Daya Manusia (SDM) yang unggul di era 4.0.
-              </p>
+            <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
+              <p>SMKS Mahaputra Cerdas Utama didirikan pada 22 Agustus tahun 2016, adalah salah satu SMK swasta yang ada di Kabupaten Bandung yang memiliki program study Multimedia (MM) dan Rekyasa Perangkat Lunak (RPL), menjadi sekolah pertama di Kabupaten Bandung dengan Konsep Green School atau Sekolah Hijau yang ramah lingkungan SMKS Mahaputra Cerdas Utama berkomitmen untuk mencetak Sumber Daya Manusia (SDM) yang unggul di era 4.0.</p>
             </div>
             <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
               <p>SMKS Mahaputra Cerdas Utama didirikan pada 22 Agustus tahun 2016, adalah salah satu SMK swasta yang ada di Kabupaten Bandung yang memiliki program study Multimedia (MM) dan Rekyasa Perangkat Lunak (RPL), menjadi sekolah pertama di Kabupaten Bandung dengan Konsep Green School atau Sekolah Hijau yang ramah lingkungan SMKS Mahaputra Cerdas Utama berkomitmen untuk mencetak Sumber Daya Manusia (SDM) yang unggul di era 4.0.</p>
@@ -115,36 +118,23 @@
           </div>
 
         </div>
-      </section><!-- End About Section -->
-
-      <!-- ======= Counts Section ======= -->
-      <section id="counts" class="counts section-bg">
-        <div class="container">
-        </div>
       </section>
-      <!-- End Counts Section -->
-
-      <!-- ======= Clients Section ======= -->
-      <section id="counts" class="counts section-bg">
-        <div class="container"></div>
-      </section>
-      <!-- End Clients Section -->
 
       <!-- ======= Team Section ======= -->
       <section id="news" class="team section-bg">
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
-            <h2>Team</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h2>Manajemen</h2>
+            <p>Berikut adalah manajemen SMKS MAHAPUTRA CERDAS UTAMA</p>
           </div>
 
           <div class="row">
 
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
               <div class="member">
                 <div class="member-img">
-                  <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                  <img src="template-assets/img/team/foto prof.jpg" class="img-fluid" alt="">
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -153,16 +143,16 @@
                   </div>
                 </div>
                 <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Prof.Dr.Ir.H.Eddy Jusuf. Sp. Ms, M.Kom. IPU</h4>
+                  <span>Pembina Yayasan</span>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
               <div class="member">
                 <div class="member-img">
-                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                  <img src="template-assets/img/team/foto ibu yayasan.jpg" class="img-fluid" alt="">
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -171,16 +161,16 @@
                   </div>
                 </div>
                 <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <h4>Dr. Hj. Dewi Indriani Jusuf,SE. Msi. CDMP</h4>
+                  <span>Ketua Yayasan</span>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
               <div class="member">
                 <div class="member-img">
-                  <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                  <img src="template-assets/img/team/foto pa kepsek.jpg" class="img-fluid" alt="">
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -189,26 +179,8 @@
                   </div>
                 </div>
                 <div class="member-info">
-                  <h4>William Anderson</h4>
+                  <h4>Drs. Dedi Hidayat, M.M.Pd</h4>
                   <span>CTO</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-              <div class="member">
-                <div class="member-img">
-                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
                 </div>
               </div>
             </div>
@@ -312,7 +284,7 @@
       </section> --><!-- End Sevices Section -->
 
       <!-- ======= Portfolio Section ======= -->
-      <section id="galeri" class="portfolio">
+      {{-- <section id="galeri" class="portfolio">
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
@@ -334,12 +306,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>App 1</h4>
                   <p>App</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -348,12 +320,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Web 3</h4>
                   <p>Web</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -362,12 +334,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>App 2</h4>
                   <p>App</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -376,12 +348,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Card 2</h4>
                   <p>Card</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -390,12 +362,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Web 2</h4>
                   <p>Web</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -404,12 +376,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>App 3</h4>
                   <p>App</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -418,12 +390,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Card 1</h4>
                   <p>Card</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -432,12 +404,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Card 3</h4>
                   <p>Card</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -446,12 +418,12 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                <img src="template-assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Web 3</h4>
                   <p>Web</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                    <a href="template-assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -461,7 +433,7 @@
           </div>
 
         </div>
-      </section><!-- End Portfolio Section -->
+      </section><!-- End Portfolio Section --> --}}
 
       <!-- ======= Pricing Section ======= -->
       <section id="pricing" class="pricing">
@@ -675,10 +647,73 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit">Kirim Pesan</button></div>
+                <div class="text-center mb-4"><button type="submit">Kirim Pesan</button></div>
               </form>
 
             </div>
+
+            {{-- footer --}}
+            <!-- ======= Footer ======= -->
+      <div class="col-lg-3 col-md-6 footer-contact">
+        <h3>SMKS MAHAPUTRA CERDAS UTAMA</h3>
+        <p>
+          Jl. Katapang-Andir Km. 4 Kp. Pasantren Desa Sukamukti Kec. Katapang, Kab. Bandung<br><br>
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links mx-5">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="index.php/">Beranda</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#jurusan">Jurusan</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#about">Profile</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#galeri">Galeri</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#news">Berita</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#pricing">PPDB</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 footer-newsletter">
+        <h4 style="margin-bottom: 4px; font-size: 16px; color: #124265;">Jam Kerja</h4>
+        <br>
+
+        <h4 style="margin-bottom: 4px; font-size: 16px; color: #444444;">Senin s.d Jumat</h4>
+        <p style="font-size: 14px;">Pukul 08.00 - 16.00 WIB</p>
+
+        <h4 style="margin-bottom: 4px; font-size: 16px; color: #444444;">Sabtu</h4>
+        <p style="font-size: 14px;">Pukul 09.00 - 15.00 WIB</p>
+
+        <h4 style="margin-bottom: 4px; font-size: 16px; color: #444444;">Minggu / Tanggal Merah</h4>
+        <p style="font-size: 14px;">Libur</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container d-md-flex py-4">
+
+  <div class="me-md-auto text-center text-md-start">
+    <div class="copyright">
+      &copy; Copyright <strong><span>SMKS MAHAPUTRA CERDAS UTAMA</span></strong>. All Rights Reserved
+
+      &copy; Copyright <strong><span>SMK MAHAPUTRA CERDAS UTAMA</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+  <div class="social-links text-center text-md-right pt-3 pt-md-0">
+    <a href="https://www.instagram.com/smkmahaputracerdasutama/?hl=id" class="instagram"><i class="bx bxl-instagram"></i></a>
+    <a href="https://www.facebook.com/smkmahaputra/" class="facebook"><i class="bx bxl-facebook"></i></a>
+    <a href="https://www.youtube.com/channel/UCCfYqV-2N44pFhsQpGEedCw" class="youtube"><i class="bx bxl-youtube"></i></a>
+  </div>
+</div>
+</footer><!-- End Footer -->
 
           </div>
 
